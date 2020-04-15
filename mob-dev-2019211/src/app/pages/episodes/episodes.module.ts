@@ -9,12 +9,12 @@ import { EpisodesPageRoutingModule } from './episodes-routing.module';
 import { EpisodesPage } from './episodes.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    EpisodesPageRoutingModule
-  ],
-  declarations: [EpisodesPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        EpisodesPageRoutingModule
+    ],
+    declarations: [EpisodesPage]
 })
-export class EpisodesPageModule {}
+export class EpisodesPageModule { }

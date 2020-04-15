@@ -4,21 +4,21 @@ import { IonicModule } from '@ionic/angular';
 import { EpisodesPage } from './episodes.page';
 
 describe('EpisodesPage', () => {
-  let component: EpisodesPage;
-  let fixture: ComponentFixture<EpisodesPage>;
+    let component: EpisodesPage;
+    let fixture: ComponentFixture<EpisodesPage>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ EpisodesPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [EpisodesPage],
+            imports: [IonicModule.forRoot()]
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(EpisodesPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+        fixture = TestBed.createComponent(EpisodesPage);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
