@@ -8,9 +8,12 @@ import { ApiService } from '../../services/api.service';
     styleUrls: ['./episodes.page.scss'],
 })
 export class EpisodesPage implements OnInit {
-    episodes: Observable<any>;
+    
+    //episodes: Observable<any>;
+    
     constructor(private router: Router, private api: ApiService) { }
+    
     ngOnInit() {
-        this.episodes = this.api.getEpisodes();
+        //this.episodes = this.api.getEpisodes();
     }
 }
