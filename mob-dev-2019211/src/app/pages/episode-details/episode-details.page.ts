@@ -21,7 +21,7 @@ export class EpisodeDetailsPage implements OnInit {
         this.episodeId = this.activatedRoute.snapshot.paramMap.get('id');
 
         this.api.getEpisode(this.episodeId).subscribe(res => {
-            this.episodeId = res;
+            this.episode = res[0];
         });
 
         this.favouriteService.isFavourite(this.episodeId).then(isFav => {
