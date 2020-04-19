@@ -15,9 +15,9 @@
 		</ion-card-content>
 	</ion-card>
 
-<ion-card *ngIf="character">
+	<ion-card *ngIf="character">
 		<ion-card-content>
-			<h4><strong>{{ character.name }} </strong></h4>
+			<h3><strong>{{ character.name }} </strong></h3>
 		</ion-card-content>
 	</ion-card>
 
@@ -26,5 +26,16 @@
 			<h3><strong>Occupation: {{ character.occupation }} </strong></h3>
 		</ion-card-content>
 	</ion-card>
+
+    <ion-card *ngIf="character">
+        <ion-card-content>
+			<h3><strong>Birthday: {{ character.birthday }} </strong></h3>
+		</ion-card-content>
+
+    <ion-card-content>
+			<img src="{{ character.img }}">
+		</ion-card-content>
+	</ion-card>
+</ion-content>
 
 </ion-content>
