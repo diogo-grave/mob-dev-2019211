@@ -9,12 +9,12 @@ import { QuotesPageRoutingModule } from './quotes-routing.module';
 import { QuotesPage } from './quotes.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    QuotesPageRoutingModule
-  ],
-  declarations: [QuotesPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        QuotesPageRoutingModule
+    ],
+    declarations: [QuotesPage]
 })
-export class QuotesPageModule {}
+export class QuotesPageModule { }

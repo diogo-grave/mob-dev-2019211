@@ -9,12 +9,12 @@ import { DeathsPageRoutingModule } from './deaths-routing.module';
 import { DeathsPage } from './deaths.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    DeathsPageRoutingModule
-  ],
-  declarations: [DeathsPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        DeathsPageRoutingModule
+    ],
+    declarations: [DeathsPage]
 })
-export class DeathsPageModule {}
+export class DeathsPageModule { }

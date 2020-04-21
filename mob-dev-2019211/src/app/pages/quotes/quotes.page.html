@@ -7,11 +7,9 @@
 <ion-content>
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 
-  <ion-list>
-    <ion-item button detail lines="inset" 
-    *ngFor="let quote of quotes | async" 
-    (click)="openDetails(quote)">
-      {{ quote.quote }}
-    </ion-item>
-  </ion-list>
+	<ion-list>
+		<ion-item button detail lines="inset" *ngFor="let quote of quotes | async" (click)="openDetails(quote)">
+			{{ quote.quote }}
+		</ion-item>
+	</ion-list>
 </ion-content>

@@ -1,5 +1,3 @@
-//This is the path for your app, you always have to check if the put you in the right direction 
-
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [{

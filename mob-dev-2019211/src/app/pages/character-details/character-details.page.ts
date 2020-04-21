@@ -14,14 +14,14 @@ export class CharacterDetailsPage implements OnInit {
 
     constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
 
-  ngOnInit() {
+    ngOnInit() {
 
-    this.characterId = this.activatedRoute.snapshot.paramMap.get('id');
+        this.characterId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.api.getCharacter(this.characterId).subscribe(res => {
-      this.character = res[0];
-    });
+        this.api.getCharacter(this.characterId).subscribe(res => {
+            this.character = res[0];
+        });
 
-  }
- 
+    }
+
 }
