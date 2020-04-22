@@ -1,20 +1,28 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FavouriteService } from '../../services/favourite.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../../services/api.service';
 
-import { IonicModule } from '@ionic/angular';
-
-import { QuoteDetailsPageRoutingModule } from './quote-details-routing.module';
-
-import { QuoteDetailsPage } from './quote-details.page';
-
-@NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        QuoteDetailsPageRoutingModule
-    ],
-    declarations: [QuoteDetailsPage]
+@Component({
+    selector: 'app-quote-details',
+    templateUrl: './quote-details.page.html',
+    styleUrls: ['./quote-details.page.scss'],
 })
-export class QuoteDetailsPageModule { }
+export class QuoteDetailsPage implements OnInit {
+
+    quote: any;
+    quoteId = null;
+
+    constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private favouriteService: FavouriteService) { }
+
+    ngOnInit() {
+
+        this.quoteId = this.activatedRoute.snapshot.paramMap.get('id');
+
+        this.api.getQuote(this.quoteId).subscribe(res => {
+            this.quote = res[0];
+        });
+
+    }
+
+}

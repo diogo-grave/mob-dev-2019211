@@ -1,9 +1,24 @@
 <ion-header>
-	<ion-toolbar>
-		<ion-title>QuoteDetails</ion-title>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button defaulthref="/tabs/quotes"></ion-back-button>
+		</ion-buttons>
+		<ion-title>Quotes Details</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+	<ion-card *ngIf="quote">
+		<ion-card-content>
+			<h3><strong>Quote: {{ quote.quote }} </strong></h3>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card *ngIf="quote">
+		<ion-card-content>
+			<h3><strong>Author: {{ quote.author }} </strong></h3>
+		</ion-card-content>
+	</ion-card>
 
 </ion-content>
