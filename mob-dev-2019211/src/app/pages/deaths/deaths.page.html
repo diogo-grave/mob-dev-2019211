@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+     <ion-searchbar [(ngModel)]="text" (ionChange)="search($event)"></ion-searchbar>
 	<ion-list>
 		<ion-item *ngFor="let death of deaths | async">
 			{{ death.deathCount }}
