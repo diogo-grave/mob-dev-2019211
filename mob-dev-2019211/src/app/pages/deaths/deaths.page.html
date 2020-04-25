@@ -4,13 +4,10 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content>
-	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
-
-	<ion-card *ngIf="death">
-		<ion-card-content>
-			<h3>Death Count: {{ death-count }} </h3>
-		</ion-card-content>
-	</ion-card>
-
+<ion-content class="ion-padding">
+	<ion-list>
+		<ion-item *ngFor="let death of deaths | async">
+			{{ death.deathCount }}
+		</ion-item>
+	</ion-list>
 </ion-content>

@@ -16,8 +16,8 @@ export class QuotesPage implements OnInit {
 
     ngOnInit() {
         this.quotes = this.api.getQuotes();
-        this.quotes.subscribe(data => {
-            console.log('my data', data);
+        this.quotes.subscribe(res => {
+            console.log('my data: ', res);
         });
     }
 
