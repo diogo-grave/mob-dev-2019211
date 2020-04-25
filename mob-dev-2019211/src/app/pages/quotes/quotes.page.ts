@@ -11,6 +11,7 @@ import { ApiService } from '../../services/api.service';
 export class QuotesPage implements OnInit {
 
     quotes: Observable<any>;
+    text: any;
 
     constructor(private router: Router, private api: ApiService) { }
 
@@ -24,5 +25,12 @@ export class QuotesPage implements OnInit {
     openDetails(quote) {
         let quoteId = quote.quote_id;
         this.router.navigateByUrl(`/tabs/quotes/${quoteId}`);
+    }
+
+    search() {
+        this.quotes = this.api.searchQuote(this.text);
+        this.quotes.subscribe(data => {
+            console.log('my data', data);
+        });
     }
 }

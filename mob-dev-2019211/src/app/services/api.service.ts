@@ -36,4 +36,8 @@ export class ApiService {
         return this.http.get(`https://www.breakingbadapi.com/api/death-count`);
     }
 
+    searchQuote(name){
+       return this.http.get(`https://www.breakingbadapi.com/api/quote?author=${name}`);
+    }
+
 }
