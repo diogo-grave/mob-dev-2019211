@@ -10,6 +10,7 @@ import { ApiService } from '../../services/api.service';
 })
 export class CharactersPage implements OnInit {
     //We need an array of characters, so we create an array
+    //Code from: https://youtu.be/NBeExE9dvR0
     characters = [];
     offset = 0;
     numberCharacters = 63;

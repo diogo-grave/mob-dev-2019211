@@ -9,6 +9,9 @@ const STORAGE_KEY = 'favouriteEpisodes';
 export class FavouriteService {
 
     constructor(private storage: Storage) { }
+//Logic to all like/dislike function 
+//Retrieved from Mikhail Timofeev, lecturer from CCT, module Mobile Development 
+//https://drive.google.com/file/d/1T_UPqV98wRzuYHBgmlOV_Oy5ha9SN9Ie/view?usp=sharing
 
     getAllFavouriteEpisodes() {
         return this.storage.get(STORAGE_KEY);

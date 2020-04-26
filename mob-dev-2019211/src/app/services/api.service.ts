@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
     providedIn: 'root'
 })
 export class ApiService {
-
+//This file is the main routers to url requests, where methods in page.ts are called through this page
     constructor(private http: HttpClient) { }
 
     getEpisodes() {
         return this.http.get('https://www.breakingbadapi.com/api/episodes');
     }
-
+//When we need to pass a variable to the API is fundamental using `` instead of ''
     getEpisode(id) {
         return this.http.get(`https://www.breakingbadapi.com/api/episodes/${id}`);
     }

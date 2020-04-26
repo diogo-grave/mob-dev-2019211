@@ -11,7 +11,7 @@ import { ApiService } from '../../services/api.service';
 export class QuotesPage implements OnInit {
 
     quotes: Observable<any>;
-    text: any;
+    input: string = '';
 
     constructor(private router: Router, private api: ApiService) { }
 
@@ -28,7 +28,7 @@ export class QuotesPage implements OnInit {
     }
 
     search() {
-        this.quotes = this.api.searchQuote(this.text);
+        this.quotes = this.api.searchQuote(this.input);
         this.quotes.subscribe(data => {
             console.log('info', data);
         });

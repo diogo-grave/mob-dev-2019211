@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-searchbar [(ngModel)]="text" (ionChange)="search($event)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="input" (ionChange)="search($event)"></ion-searchbar>
 
 	<ion-list>
 		<ion-item button detail lines="inset" *ngFor="let quote of quotes | async" (click)="openDetails(quote)">

@@ -7,7 +7,7 @@
 <ion-content>
 
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
-
+<!-- Code based upon: https://youtu.be/NBeExE9dvR0-->
 	<ion-list>
 		<!-- I removed async because it is an Observable function and it doesn't work without -->
 		<ion-item button detail lines="inset" *ngFor="let character of characters" (click)="openDetails(character)">
