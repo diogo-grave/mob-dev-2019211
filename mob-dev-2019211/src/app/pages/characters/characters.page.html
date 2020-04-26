@@ -9,10 +9,16 @@
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 
 	<ion-list>
-		<ion-item button detail lines="inset" *ngFor="let character of characters | async"
-			(click)="openDetails(character)">
+		<!-- I removed async because it is an Observable function and it doesn't work without -->
+		<ion-item button detail lines="inset" *ngFor="let character of characters" (click)="openDetails(character)">
 			{{ character.name }}
 		</ion-item>
 	</ion-list>
+	<!-- the infinte scroll occurs when the sidebar is 20% to be completed -->
+	<!-- as soon as it reaches the remaining 20%, the method is called to load more -->
+	<ion-infinite-scroll threshold="20%" (ionInfinite)="loadMore($event)">
+		<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data">
+		</ion-infinite-scroll-content>
+	</ion-infinite-scroll>
 
 </ion-content>

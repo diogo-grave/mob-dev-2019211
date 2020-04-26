@@ -17,8 +17,8 @@ export class QuotesPage implements OnInit {
 
     ngOnInit() {
         this.quotes = this.api.getQuotes();
-        this.quotes.subscribe(res => {
-            console.log('my data: ', res);
+        this.quotes.subscribe(data => {
+            console.log('info: ', data);
         });
     }
 
@@ -30,7 +30,7 @@ export class QuotesPage implements OnInit {
     search() {
         this.quotes = this.api.searchQuote(this.text);
         this.quotes.subscribe(data => {
-            console.log('my data', data);
+            console.log('info', data);
         });
     }
 }
