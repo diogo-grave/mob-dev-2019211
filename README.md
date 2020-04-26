@@ -1,5 +1,3 @@
-# mob-dev-2019211
-
 MOBILE DEVELOPMENT
 
 
@@ -46,3 +44,11 @@ https://youtu.be/NBeExE9dvR0
 https://www.freecodecamp.org/news/how-to-build-your-first-ionic-4-app-with-api-calls-f6ea747dc17a/
 
 https://www.youtube.com/watch?v=mDPgmRlArPc&list=PLE4aWcuKhzABV7naOADbDusXVPRv58vd-&index=1 (It is important to note that it is in Portuguese for better understanding)
+
+
+
+GitHub address: https://github.com/diogo-grave/mob-dev-2019211
+
+YouTube address: https://www.youtube.com/watch?v=qx9Ajakpgu0
+
+I uploaded this video on YouTube showing you my Ionic Application working on my iPhone because it was not working properly on Safari or Google Chrome.
