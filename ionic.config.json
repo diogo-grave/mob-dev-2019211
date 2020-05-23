@@ -1,5 +1,7 @@
 {
   "name": "mob-dev-2019211",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
